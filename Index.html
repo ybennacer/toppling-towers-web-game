@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toppling Towers - The Word Game</title>
+    <link rel="stylesheet" href="css/Style.css">
+  </head>
+  <body>
+
+    <ul>    
+  <li><a class="active" href="Index.html">Home</a></li>
+  <li><a href="Pages/Rules.html">How to Play</a></li>
+  <li><a href="Pages/Leaderboard.html">Leaderboard</a></li>
+  <li><a onclick="document.getElementById('modalLoginid').style.display='block'">Login</a></li>
+  <li><a onclick="document.getElementById('modalSignupid').style.display='block'">Register</a></li>
+  <li><a href="Pages/Play.html">Play</a></li>
+  <li><a href="#" id="logoutLink" onclick="logout()">Logout</a></li>
+    </ul>
+
+  <div class="logoimage">
+    <img src="images/logo.png" alt="logo">
+  </div>  
+
+  <div class="image">
+    <img src="images/background.GIF" alt="background">
+  </div>
+
+  <div class="backgroundTitle">
+    <img src="images/backgroundTitle.gif" alt="backgroundTitle">
+  </div>
+  
+  <div>
+  <a href="Pages/Play.html"class="play-button">Play</a>
+  </div>
+  
+  <button class="loginTrigger"onclick="document.getElementById('modalLoginid').style.display='block'">Login</button>
+  <div id="modalLoginid" class="modal">
+    <form id="loginForm" class="modal-content animate">
+      <div class="loginModalTitle">
+        <img src="images/title.png" alt="title">
+      </div>
+      <h4> Welcome back to Toppling Towers!</h4>
+      <div id ="loginDiv" class="container">
+        <label for="loginUsername">Username:</label><br>
+        <input type="text" id="loginUsername" name="username" required><br>
+        <label for ="loginPassword">Password:</label><br>
+        <input type="password" id="loginPassword" name="loginPassword" required><br><br>  
+        <button onclick="login()" class="loginbutton">Login</button>
+      </div>
+      <div class="container">
+        <button type="button" onclick="document.getElementById('modalLoginid').style.display='none'" class="cancelbutton">Close</button>
+      </div>
+      <p id="loginFailure"></p>
+    </form>
+  </div>
+
+  <button class="signupTrigger"onclick="document.getElementById('modalSignupid').style.display='block'">Register</button>
+  <div id="modalSignupid" class="modal">
+    <form id="registerForm" class="modal-content animate" onsubmit="return register(event)">
+      <div class="loginModalTitle">
+        <img src="images/title.png" alt="title">
+      </div>
+      <div class="registermessages">
+      <h4> Welcome to Toppling Towers!<br> Please register using your phone number and email.</h4>
+      <h5>Create a username and password.</h5>
+      </div>
+      <div class="container">
+        <label for="phoneNumber">Phone number:</label><br>
+        <input type="tel" id="phoneNumber" name="phone" placeholder="+1(123) 456-7890" autocomplete="off" required><br>
+        <label for="emailAddress">Email Address:</label><br>
+        <input type="email" id="emailAddress" name="email" placeholder="myName@gmail.com" autocomplete="off" required><br><br>
+        <label for="registerUsername">Username:</label><br>
+        <input type="text" id="registerUsername" name="username" placeholder="e.g. Bob" autocomplete="off" required><br>           
+        <label for ="registerPassword">Password:</label><br>
+        <input type="password" id="registerPassword" name="password" minlength="8" required><br><br>  
+        <button type="submit" class="signupbutton">Register</button>
+      </div>
+      <div class="container">
+        <button type="button" onclick="document.getElementById('modalSignupid').style.display='none'" class="cancelbutton">Cancel</button>
+      </div>
+      <p id="Result"></p>
+    </form>
+  </div>
+ 
+  <script src = 'javascript/Users.mjs'></script>
+
+   </body>
+ </html>

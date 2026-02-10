@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="../css/Style.css">
+  </head>
+  <body>
+   
+    <ul>
+      <li><a href="../Index.html">Home</a></li>
+      <li><a class="active" href="Rules.html">  How to Play</a></li>
+      <li><a href="Leaderboard.html">Leaderboard</a></li>
+      <li><a onclick="document.getElementById('modalLoginid').style.display='block'">Login</a></li>
+      <li><a onclick="document.getElementById('modalSignupid').style.display='block'">Register</a></li>
+      <li><a href="Play.html">Play</a></li>
+      <li><a href="#" id="logoutLink" onclick="logout()">Logout</a></li>
+    </ul>
+    <div class="logoimage">
+      <img src="../images/logo.png" alt="logo">
+    </div>
+
+    
+    <div id="modalLoginid" class="modal">
+      <form id="loginForm" class="modal-content animate">
+        <div class="loginModalTitle">
+          <img src="../images/title.png" alt="title">
+        </div>
+        <h4> Welcome back to Toppling Towers!</h4>
+        <div id ="loginDiv" class="container">
+          <label for="loginUsername">Username:</label><br>
+          <input type="text" id="loginUsername" name="username" required><br>
+          <label for ="loginPassword">Password:</label><br>
+          <input type="password" id="loginPassword" name="loginPassword" required><br><br>  
+          <button onclick="login()" class="loginbutton">Login</button>
+        </div>
+        <div class="container">
+          <button type="button" onclick="document.getElementById('modalLoginid').style.display='none'" class="cancelbutton">Close</button>
+        </div>
+        <p id="loginFailure"></p>
+      </form>
+    </div>
+
+    <div id="modalSignupid" class="modal">
+      <form id="registerForm" class="modal-content animate" onsubmit="return register(event)">
+        <div class="loginModalTitle">
+          <img src="../images/title.png" alt="title">
+        </div>
+        <div class="registermessages">
+        <h4> Welcome to Toppling Towers!<br> Please register using your phone number and email.</h4>
+        <h5>Create a username and password.</h5>
+        </div>
+        <div class="container">
+          <label for="phoneNumber">Phone number:</label><br>
+          <input type="tel" id="phoneNumber" name="phone" placeholder="+1(123) 456-7890" autocomplete="off" required><br>
+          <label for="emailAddress">Email Address:</label><br>
+          <input type="email" id="emailAddress" name="email" placeholder="myName@gmail.com" autocomplete="off" required><br><br>
+          <label for="registerUsername">Username:</label><br>
+          <input type="text" id="registerUsername" name="username" placeholder="e.g. Bob" autocomplete="off" required><br>           
+          <label for ="registerPassword">Password:</label><br>
+          <input type="password" id="registerPassword" name="password" minlength="8" required><br><br>  
+          <button onclick="register()" class="signupbutton">Register</button>
+        </div>
+        <div class="container">
+          <button type="button" onclick="document.getElementById('modalSignupid').style.display='none'" class="cancelbutton">Cancel</button>
+        </div>
+        <p id="Result"></p>
+      </form>
+    </div>
+
+
+    <div class="rulesInstructions">
+      <h2>How to Play Toppling Towers</h2>
+    
+      <div class="rules-grid">
+        <div>
+          <h3>Starting the Game</h3>
+          <p>Log in or register if you're a new player. Once logged in, click "Play" to begin.</p>
+        </div>
+        <div>
+          <h3>Guessing Letters</h3>
+          <p>A secret word will be chosen randomly, and you'll see blue question boxes representing each letter of the word.</p>
+            <strong>Correct Guess</strong>: If the letter is in the word, it will appear in the correct position.<br>
+            <strong>Incorrect Guess</strong>: If the letter is not in the word, it brings the tower one step closer to toppling.
+        </div>
+        <div>
+          <h3>Tracking Score</h3>
+          <p>Each correct word guessed adds ten points to your score. However, each incorrect guess reduces your score. Your total score will be saved to your account after each game, so you can compete for a spot on the leaderboard.</p>
+        </div>
+        <div>
+          <h3>Winning & Losing</h3>
+            <strong>Win</strong>: Complete the word by guessing all the letters correctly before the tower collapses.<br>
+            <strong>Loss</strong>: If you reach the maximum number of incorrect guesses, the tower collapses, and the game ends.
+        </div>
+        <div>
+          <h3>Leaderboard</h3>
+          <p>Check the leaderboard page to see your rank and compare your score with other players.</p>
+        </div>
+      </div>
+      <p class="tip">Tips: Focus on common letters first (like vowels), as they are more likely to appear in the word. <br> Try to avoid random guessing - each incorrect guess brings you closer to losing the game.</p>
+    </div>
+    
+    
+    
+    <script src = '../javascript/Users.mjs'></script>
+
+</body>
+</html>
