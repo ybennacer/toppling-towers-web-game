@@ -34,3 +34,6 @@ I built this project to challenge myself to create a complete, user-facing appli
 - Introduce a backend service for authentication and persistence
 - Containerise the application for easier deployment
 - Explore hosting and CI/CD workflows
+- Extend the word set to include longer, more complex words to offer adjustable difficulty and improved replayability
+
+
