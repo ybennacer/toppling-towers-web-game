@@ -7,7 +7,7 @@ The project focuses on modular JavaScript design, user interaction, and clear se
 ## Screenshots
 
 ### Home Page
-![Home Page](screenshots/home-page.mp4)
+![Home Page](screenshots/home-page.gif)
 
 ### Gameplay
 ![Gameplay](screenshots/gameplay.png)
@@ -52,6 +52,7 @@ I built this project to challenge myself to create a complete, user-facing appli
 - Containerise the application for easier deployment
 - Explore hosting and CI/CD workflows
 - Extend the word set to include longer, more complex words to offer adjustable difficulty and improved replayability
+
 
 
 
