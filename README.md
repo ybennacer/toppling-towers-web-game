@@ -4,6 +4,15 @@
 Toppling Towers is a browser-based game built using HTML, CSS, and JavaScript.
 The project focuses on modular JavaScript design, user interaction, and clear separation of concerns in a frontend-only application.
 
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/home-page.png)
+
+### Gameplay
+![Gameplay](screenshots/gameplay.png)
+
+
 **Note:** Because this project uses modular JavaScript and relative asset paths, it needs to be run via a local server for styles and scripts to load correctly.
 
 ## How to run locally 
@@ -43,6 +52,7 @@ I built this project to challenge myself to create a complete, user-facing appli
 - Containerise the application for easier deployment
 - Explore hosting and CI/CD workflows
 - Extend the word set to include longer, more complex words to offer adjustable difficulty and improved replayability
+
 
 
 
